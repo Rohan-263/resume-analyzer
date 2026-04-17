@@ -1,9 +1,9 @@
 import React, { use, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router";
-import ATS from "~/components/ATS";
-import Details from "~/components/Details";
-import Summary from "~/components/Summary";
-import { usePuterStore } from "~/lib/puter";
+import ATS from "../components/ATS";
+import Details from "../components/Details";
+import Summary from "../components/Summary";
+import { usePuterStore } from "../lib/puter";
 
 const resume = () => {
   const { auth, isLoading, fs, ai, kv } = usePuterStore();
