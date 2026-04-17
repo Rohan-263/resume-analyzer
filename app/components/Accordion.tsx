@@ -121,10 +121,11 @@ export const AccordionHeader: React.FC<AccordionHeaderProps> = ({
 
   return (
     <button
+      aria-expanded={isActive}
       onClick={handleClick}
       className={`
         w-full px-4 py-3 text-left
-        focus:outline-none
+        focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500
         transition-colors duration-200 flex items-center justify-between cursor-pointer
         ${className}
       `}
@@ -156,7 +157,7 @@ export const AccordionContent: React.FC<AccordionContentProps> = ({
     <div
       className={`
         overflow-hidden transition-all duration-300 ease-in-out
-        ${isActive ? "max-h-fit opacity-100" : "max-h-0 opacity-0"}
+        ${isActive ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
         ${className}
       `}
     >
